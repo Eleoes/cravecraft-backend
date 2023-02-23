@@ -1,0 +1,21 @@
+{
+  "name": "cravecraft-backend",
+  "version": "1.0.0",
+  "description": "Backend for CraveCraft",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "keywords": [],
+  "author": "Christine Graybosch, Leonardo Escaroz",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.10.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
+  }
+}

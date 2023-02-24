@@ -9,7 +9,7 @@ const app = express();
 require('dotenv').config();
 const { PORT, DATABASE_URL } = process.env;
 
-// Remove the Deprecation Warning for Mongoose's upcoming strictQuery change
+// Remove the Deprecation Warning for upcoming Mongoose 7 strictQuery change
 mongoose.set('strictQuery', false);
 
 // Connect to MongoDB using Mongoose

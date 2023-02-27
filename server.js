@@ -1,6 +1,8 @@
 // Dependencies
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
+const logger = require('morgan');
 
 // Initialize the App
 const app = express();
@@ -16,13 +18,16 @@ mongoose.set('strictQuery', false);
 mongoose.connect(DATABASE_URL);
 
 // Mount Middleware
+app.use(cors());
+app.use(logger('dev'));
+
 mongoose.connection
 .on('connected', () => console.log('Connected to MongoDB'))
-.on('error', (error) => console.log('MongoDB error:' + error.message))
+.on('error', (error) => console.log('MongoDB error:' + error.message));
 
 // Mount routes
 app.get('/', (req,res) => {
-    res.send('Hello World');
+    res.send('Welcome to CraveCraft API');
 });
 
 // Tell the App to Listen

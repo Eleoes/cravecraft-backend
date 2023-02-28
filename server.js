@@ -27,10 +27,6 @@ mongoose.connection
 .on('error', (error) => console.log('MongoDB error:' + error.message));
 
 // Mount routes
-app.get('/', (req,res) => {
-    res.send('Welcome to CraveCraft API');
-});
-
 app.use('/', express.static(path.join(__dirname, '/public')));
 
 app.use('/', require('./controllers/root'));

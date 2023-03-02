@@ -23,7 +23,8 @@ mongoose.connect(DATABASE_URL);
 // Mount Middleware
 app.use(express.json());
 app.use(cors());
-app.use(logger("dev"));
+app.use(logger('dev'));
+app.use(express.json());
 
 mongoose.connection
   .on("connected", () => console.log("Connected to MongoDB"))

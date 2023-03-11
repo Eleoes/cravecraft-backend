@@ -2,6 +2,15 @@ const Recipes = require("../models/recipe");
 const router = require("express").Router();
 
 //Routes/Controllers
+// SEED
+const seedData = require("../models/recipeSEED");
+router.get("/seed", (req, res) => {
+  Recipes.deleteMany({}, (error, allRecipes) => {});
+  Recipes.create(seedData, (error, data) => {
+    res.redirect("/");
+  });
+});
+
 //index
 router.get("/", async (req, res) => {
   try {

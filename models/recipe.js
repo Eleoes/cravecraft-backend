@@ -6,8 +6,7 @@ const recipesSchema = new Schema(
     title: String,
     image: {
       type: String,
-      default:
-        "https://www.pngkey.com/detail/u2e6q8y3r5e6u2y3_placeholder-pixabay-logo-png/",
+      default: "../public/assets/Fruits_Flipped.jpeg",
     },
     prepTime: String,
     cookingTime: String,
